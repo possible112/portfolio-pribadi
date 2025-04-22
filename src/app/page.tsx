@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -16,7 +15,7 @@ export default function Home() {
           {/* Kiri: Text */}
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold">
-              <span className="text-pink-600">Hi, I'm</span> Andi Agung
+              <span className="text-pink-600">Hi, I&apos;m</span> Andi Agung
             </h1>
             <h2 className="text-lg md:text-xl font-semibold text-white">
               <Typewriter
@@ -87,12 +86,12 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 space-y-4">
           <h2 className="text-4xl text-stone-800 font-bold text-center mb-8">About Me</h2>
           <p className="text-gray-800 font-semibold text-justify">
-            Hola, I'm Andi Muhammad Agung Ramadhani Syam & u can call me Andi or Agung.
+            Hola, I&apos;m Andi Muhammad Agung Ramadhani Syam & u can call me Andi or Agung.
             A fresh graduate in Informatics from Kalimantan Institute of Technology and currently interning at Telkomsel Area 4
-            Pamasuka as a backend developer and I've experience in full-stack development at MSIB Batch 5.
+            Pamasuka as a backend developer and I&apos;ve experience in full-stack development at MSIB Batch 5.
           </p>
           <p className="text-gray-800 font-semibold text-justify">
-            I've strong passion especially in backend development, data engineering, and IoT. Two times reached the final stage at GEMASTIK XVI & XVII for me competing means to fight smart, lose strong, and come back stronger. I'm eager to contribute to impactful projects, and continue developing both as an individual and within a team. My goal is to continuously improve my technical and professional skills in information technology and contribute to the creation of innovative and cutting-edge technologies.
+            I&apos;ve strong passion especially in backend development, data engineering, and IoT. Two times reached the final stage at GEMASTIK XVI & XVII for me competing means to fight smart, lose strong, and come back stronger. I&apos;m eager to contribute to impactful projects, and continue developing both as an individual and within a team. My goal is to continuously improve my technical and professional skills in information technology and contribute to the creation of innovative and cutting-edge technologies.
           </p>
         </div>
       </section>
@@ -106,7 +105,7 @@ export default function Home() {
             <h3 className="text-xl text-gray-200 font-semibold mb-2">Backend Developer Intern</h3>
             <p className="text-pink-600 mb-2">Telkomsel Area 4 Pamasuka | February 2025 - May 2025</p>
             <p className="text-gray-200">
-              Build and Design API for chatbot telegram integration with LLM'S.
+              Build and Design API for chatbot telegram integration with LLM&apos;S.
             </p>
           </div>
 
