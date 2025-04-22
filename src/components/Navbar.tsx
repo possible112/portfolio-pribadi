@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen] = useState(false);
 
   return (
     // Completely hide the navbar on mobile
