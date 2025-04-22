@@ -93,6 +93,9 @@ export default function Home() {
           <p className="text-gray-800 font-semibold text-justify">
             I&apos;ve strong passion especially in backend development, data engineering, and IoT. Two times reached the final stage at GEMASTIK XVI & XVII for me competing means to fight smart, lose strong, and come back stronger. I&apos;m eager to contribute to impactful projects, and continue developing both as an individual and within a team. My goal is to continuously improve my technical and professional skills in information technology and contribute to the creation of innovative and cutting-edge technologies.
           </p>
+          <p className=" text-pink-600 text-xl font-semibold text-justify">
+            " <span className='text-gray-600'>Thing</span>s make you confused, but Thinking makes you <span className='text-gray-600'>Focus</span>."
+          </p>
         </div>
       </section>
 
