@@ -10,14 +10,14 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen w-full flex items-center justify-center bg-stone-800 text-white px-6">
-        <div className="w-full grid md:grid-cols-2 gap-25 items-center py-16 md:px-24">
-          {/* Kiri: Text */}
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold">
-              <span className="text-pink-600">Hi, I&apos;m</span> Andi Agung
+      <section id="hero" className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-stone-800 text-white px-6">
+        <div className="w-full grid md:grid-cols-2 gap-8 items-center py-16 md:px-24">
+          {/* Left: Text */}
+          <div className="space-y-4 text-center md:text-left">
+            <h1 className="text-pink-600 text-4xl md:text-6xl font-bold">
+              <span className="text-gray-100">Hi, I&apos;m</span> Andi Agung
             </h1>
-            <h2 className="text-lg md:text-xl font-semibold text-white">
+            <h2 className="text-lg md:text-xl font-semibold text-gray-100">
               <Typewriter
                 options={{
                   strings: ['a Backend Developer', 'a Data Enthusiast', 'an IoT Explorer'],
@@ -32,7 +32,7 @@ export default function Home() {
               A fresh graduate in Informatics from Kalimantan Institute of Technology
               with a strong passion for IoT, Data Scientist, and AI Engineering.
             </p>
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-4 pt-2 justify-center md:justify-start">
               <a href="#about">
                 <Button variant="outline" className="border-white text-stone-800 hover:bg-stone-400 hover:text-[#282c54]">
                   Read More
@@ -51,9 +51,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Kanan: Foto */}
-          <div className="relative flex justify-center items-center">
-            <div className="relative w-[350px] h-[350px] md:w-[400px] md:h-[400px] rounded-full shadow-[0_0_60px_#7b2a50] ring-4 ring-pink-800/50 ring-offset-2 ring-offset-[#3f1d2d] animate-pulse-ring">
+          {/* Right: Image */}
+          <div className="relative flex justify-center items-center mt-8 md:mt-0">
+            <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full shadow-[0_0_60px_#7b2a50] ring-4 ring-pink-800/50 ring-offset-2 ring-offset-[#3f1d2d] animate-pulse-ring">
               <Image
                 src="/profile.jpg"
                 alt="Andi Agung"
@@ -161,7 +161,7 @@ export default function Home() {
             link="https://drive.google.com/file/d/10Yd6-s-4xo1D6irG9hrXxuOYAVce5Kve/view?usp=sharing"
           />
           <ProjectCard
-            title="Program Switchbox Geolistrik Berbasis Arduino Mega"
+            title="Geoelectric Switchbox Based on Arduino Mega"
             description="This tool may allow users to easily change the configuration of electrodes connected to a power source or measuring instrument by using switching controlled by the Arduino Mega. Click for more details>>>."
             imageUrl="/switchbox.png"
             link="https://drive.google.com/file/d/11JDK1mbTbwFXzQv4OIiqh64WWDp3sklo/view?usp=sharing"
