@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     // Completely hide the navbar on mobile
     <nav className="w-full backdrop-blur-2xl bg-[rgba(43,38,38,0.88)] sticky top-0 z-50 md:block hidden">
-      <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="mx-auto px-35 py-4 flex justify-between items-center">
         {/* Logo/Brand Name */}
         <a href="#hero" className="text-2xl font-bold">
           <span className="text-pink-600">Andi</span> <span className="text-white">Agung</span>

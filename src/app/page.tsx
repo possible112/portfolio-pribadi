@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-stone-800 text-white px-6">
-        <div className="w-full grid md:grid-cols-2 gap-8 items-center py-16 md:px-24">
+      <section id="hero" className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-stone-800 text-white px-2 py-12 md:px-16">
+        <div className="w-full grid md:grid-cols-2 gap-6 items-center py-8 md:px-16">
           {/* Left: Text */}
-          <div className="space-y-4 text-center md:text-left">
+          <div className="px-2 space-y-4 text-center md:text-left">
             <h1 className="text-pink-600 text-4xl md:text-6xl font-bold">
               <span className="text-gray-100">Hi, I&apos;m</span> Andi Agung
             </h1>
@@ -38,7 +38,6 @@ export default function Home() {
                   Read More
                 </Button>
               </a>
-              {/* Show CV Button with Link */}
               <a
                 href="https://drive.google.com/file/d/18yJ_JFugEZrNP4e12fed-NCbBnrvdEdd/view?usp=sharing"
                 target="_blank"
@@ -53,7 +52,7 @@ export default function Home() {
 
           {/* Right: Image */}
           <div className="relative flex justify-center items-center mt-8 md:mt-0">
-            <div className="relative w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full shadow-[0_0_60px_#7b2a50] ring-4 ring-pink-800/50 ring-offset-2 ring-offset-[#3f1d2d] animate-pulse-ring">
+            <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full shadow-[0_0_60px_#7b2a50] ring-4 ring-pink-800/50 ring-offset-2 ring-offset-[#3f1d2d] animate-pulse-ring">
               <Image
                 src="/profile.jpg"
                 alt="Andi Agung"
@@ -66,43 +65,40 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* About Section */}
-      <section id="about" className="scroll-mt-32 w-full flex flex-col md:flex-row items-center justify-center bg-stone-300 text-white px-10 py-16">
-        {/* Profil Gambar */}
-        <div className="flex justify-center items-center mb-8 md:mb-0">
-          <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-md ring-teal-800 ring-offset-2 ring-offset-[#3f3e1d]">
+      <section id="about" className="scroll-mt-32 w-full flex flex-col md:flex-row items-center justify-between bg-stone-300 text-white px-6 py-12">
+        <div className="flex justify-between mx-4 mb-6 md:mb-0">
+          <div className="mx-24 w-[300px] h-[300px] md:w-[350px] md:h-[350px] rounded-2xl ring-teal-800 ring-offset-2 ring-offset-[#3f3e1d]">
             <Image
               src="/profile2.jpg"
               alt="Andi Agung"
               width={350}
               height={350}
-              className="rounded-md object-cover w-full h-full"
+              className="rounded-xl object-cover w-full h-full"
             />
           </div>
         </div>
 
-        {/* Deskripsi Teks */}
-        <div className="max-w-5xl mx-auto px-4 space-y-4">
-          <h2 className="text-4xl text-stone-800 font-bold text-center mb-8">About Me</h2>
-          <p className="text-gray-800 font-semibold text-justify">
+        <div className="max-w-2xl mx-auto px-1 space-y-2">
+          <h2 className="text-4xl text-stone-800 font-bold text-center mb-6">About Me</h2>
+          <p className="text-gray-800 font-semibold text-justify ">
             Hola, I&apos;m Andi Muhammad Agung Ramadhani Syam & u can call me Andi or Agung.
             A fresh graduate in Informatics from Kalimantan Institute of Technology and currently interning at Telkomsel Area 4
             Pamasuka as a backend developer and I&apos;ve experience in full-stack development at MSIB Batch 5.
           </p>
-          <p className="text-gray-800 font-semibold text-justify">
+          <p className="text-gray-800 font-semibold text-justify ">
             I&apos;ve strong passion especially in backend development, data engineering, and IoT. Two times reached the final stage at GEMASTIK XVI & XVII for me competing means to fight smart, lose strong, and come back stronger. I&apos;m eager to contribute to impactful projects, and continue developing both as an individual and within a team. My goal is to continuously improve my technical and professional skills in information technology and contribute to the creation of innovative and cutting-edge technologies.
           </p>
-          <p className=" text-black text-xl font-semibold text-justify">
+          <p className="text-black text-xl font-semibold text-justify">
             &quot;<span className='text-pink-600'>Thing</span>s make you confused, but Thinking makes you <span className='text-pink-600'>Focus</span>.&quot;
           </p>
         </div>
       </section>
 
       {/* experiences Section */}
-      <section id="experiences" className="scroll-mt-32 py-24 bg-stone-600 text-center px-6">
-        <h2 className="text-4xl font-semibold text-gray-200 mb-16">Experiences</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-12 gap-8">
+      <section id="experiences" className="scroll-mt-32 py-16 bg-stone-600 text-center px-6">
+        <h2 className="text-4xl font-semibold text-gray-200 mb-12">Experiences</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 mx-auto gap-8">
           {/* Experience 1 */}
           <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
             <h3 className="text-xl text-gray-200 font-semibold mb-2">Backend Developer Intern</h3>
@@ -142,9 +138,9 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="scroll-mt-32 max-w-6xl mx-auto px-4 py-24">
-        <h2 className="text-4xl text-stone-600 font-bold text-center mb-8">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-18">
+      <section id="projects" className="scroll-mt-32 max-w-6xl mx-auto py-4">
+        <h2 className="text-4xl text-stone-600 font-bold text-center mt-5 mb-15">Projects</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-18 mb-18 px-4">
           <ProjectCard
             title="AviSent"
             description="Smart Bird Pest Control Prototype Based on Object Detection to Support Food Security. Click for more details>>>."
