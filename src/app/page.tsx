@@ -7,13 +7,12 @@ import ProjectCard from '@/components/ProjectCard';
 import { Mail, Github, Linkedin, Instagram, Copyright } from 'lucide-react';
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
-type platform = 'email' | 'linkedin' | 'github' | 'instagram'; // Define the type for platform
 
 export default function Home() {
   const [clicked, setClicked] = useState<string | null>(null); // track which icon is clicked
   const handleClick = (platform: string) => {
     setClicked(platform);
-    setTimeout(() => setClicked(null), 250); // Reset after 2 seconds
+    setTimeout(() => setClicked(null), 250);
   };
 
   const iconClass = "w-12 h-12 transition-all duration-300 ease-in-out transform group-hover:scale-150 group-hover:rotate-12 group-hover:shadow-xl group-hover:text-white";
