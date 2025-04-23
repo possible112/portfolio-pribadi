@@ -8,7 +8,7 @@ import { Mail, Github, Linkedin, Instagram, Copyright } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <main className="min-h-screen w-full">
       {/* Hero Section */}
       <section id="hero" className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-stone-800 text-white px-2 py-12 md:px-16">
         <div className="w-full grid md:grid-cols-2 gap-6 items-center py-8 md:px-16">
@@ -52,13 +52,14 @@ export default function Home() {
 
           {/* Right: Image */}
           <div className="relative flex justify-center items-center mt-8 md:mt-0">
-            <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full shadow-[0_0_60px_#7b2a50] ring-4 ring-pink-800/50 ring-offset-2 ring-offset-[#3f1d2d] animate-pulse-ring">
+            <div className="relative w-[200px] h-[200px] md:w-[350px] md:h-[350px] rounded-full shadow-[0_0_60px_#7b2a50] ring-4 ring-pink-800/50 ring-offset-2 ring-offset-[#3f1d2d] animate-pulse-ring">
               <Image
                 src="/profile.jpg"
                 alt="Andi Agung"
                 width={700}
                 height={700}
-                className="rounded-full object-cover w-full h-full"
+                className="rounded-full object-cover w-full h-full max-w-full"
+                priority
               />
             </div>
           </div>
@@ -66,7 +67,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="scroll-mt-32 w-full flex flex-col md:flex-row items-center justify-between bg-stone-300 text-white px-6 py-12">
+      <section id="about" className="scroll-mt-32 min-h-screen w-full flex flex-col md:flex-row items-center justify-between bg-stone-300 text-white px-6 py-12">
         <div className="flex justify-between mx-4 mb-6 md:mb-0">
           <div className="mx-24 w-[300px] h-[300px] md:w-[350px] md:h-[350px] rounded-2xl ring-teal-800 ring-offset-2 ring-offset-[#3f3e1d]">
             <Image
@@ -75,6 +76,7 @@ export default function Home() {
               width={350}
               height={350}
               className="rounded-xl object-cover w-full h-full"
+              priority
             />
           </div>
         </div>
@@ -96,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* experiences Section */}
-      <section id="experiences" className="scroll-mt-32 py-16 bg-stone-600 text-center px-6">
+      <section id="experiences" className="scroll-mt-32 py-16 flex flex-col min-h-screen w-full bg-stone-600 text-center px-6">
         <h2 className="text-4xl font-semibold text-gray-200 mb-12">Experiences</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 max-w-7xl px-5 mx-auto gap-8">
           {/* Experience 1 */}
@@ -138,8 +140,8 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="scroll-mt-32 max-w-7xl mx-auto py-4">
-        <h2 className="text-4xl text-stone-600 font-bold text-center mt-5 mb-15">Projects</h2>
+      <section id="projects" className="scroll-mt-32 min-h-screen w-full flex flex-col max-w-7xl mx-auto py-4 bg-stone-300">
+        <h2 className="text-4xl text-stone-800 font-bold text-center mt-5 mb-15">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-18 mb-18 px-8">
           <ProjectCard
             title="AviSent"
@@ -169,7 +171,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="scroll-mt-24 flex flex-col justify-end items-center bg-stone-800 text-center px-4 py-24">
+      <section id="contact" className="scroll-mt-24 flex flex-col min-h-screen w-full justify-end items-center bg-stone-800 text-center px-4 py-24">
         <h2 className="text-3xl text-gray-200 font-semibold mb-8">Get in touch with me</h2>
         <div className="flex justify-center items-center space-x-6 relative">
           {/* Email Icon */}
