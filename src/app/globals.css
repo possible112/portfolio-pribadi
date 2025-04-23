@@ -16,9 +16,17 @@
   animation: float 3s ease-in-out infinite;
 }
 
-html,body {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+html, body {
+  overflow-x: hidden; /* Untuk mencegah overflow horizontal pada perangkat mobile */
+  margin: 0;
+  padding: 0;
+}
+
+/* Agar overflow diaktifkan untuk mode desktop */
+@media screen and (min-width: 768px) {
+  body {
+    overflow-x: visible; /* Agar tidak mengganggu overflow pada desktop */
+  }
 }
 
 @keyframes pulseRing {
@@ -41,15 +49,6 @@ html,body {
 }
 
 /* Navbar yang responsif untuk perangkat lebih kecil */
-@media screen and (max-width: 767px) {
-  .navbar-links {
-    display: none; /* Menyembunyikan menu di perangkat mobile */
-  }
-
-  .navbar-hamburger {
-    display: block; /* Menampilkan tombol hamburger */
-  }
-}
 
 
 @theme inline {

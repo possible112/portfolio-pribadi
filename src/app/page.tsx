@@ -5,15 +5,29 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import ProjectCard from '@/components/ProjectCard';
 import { Mail, Github, Linkedin, Instagram, Copyright } from 'lucide-react';
+import { useState } from 'react';
+import Navbar from '@/components/Navbar';
+type platform = 'email' | 'linkedin' | 'github' | 'instagram'; // Define the type for platform
 
 export default function Home() {
+  const [clicked, setClicked] = useState<string | null>(null); // track which icon is clicked
+  const handleClick = (platform: string) => {
+    setClicked(platform);
+    setTimeout(() => setClicked(null), 250); // Reset after 2 seconds
+  };
+
+  const iconClass = "w-12 h-12 transition-all duration-300 ease-in-out transform group-hover:scale-150 group-hover:rotate-12 group-hover:shadow-xl group-hover:text-white";
+  const clickedClass = "scale-150 -rotate-12 shadow-xl";
+  const clickedClass2 = "scale-150 rotate-12 shadow-xl";
+
   return (
-    <main className="min-h-screen w-full">
+    <main className=" w-full">
       {/* Hero Section */}
+      <Navbar />
       <section id="hero" className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-stone-800 text-white px-2 py-12 md:px-16">
         <div className="w-full grid md:grid-cols-2 gap-6 items-center py-8 md:px-16">
           {/* Left: Text */}
-          <div className="px-3 space-y-4 text-center md:text-left">
+          <div className="px-5 space-y-4 text-center md:text-left">
             <h1 className="text-pink-600 text-4xl md:text-6xl font-bold">
               <span className="text-gray-100">Hi, I&apos;m</span> Andi Agung
             </h1>
@@ -52,7 +66,7 @@ export default function Home() {
 
           {/* Right: Image */}
           <div className="relative flex justify-center items-center mt-8 md:mt-0">
-            <div className="relative w-[200px] h-[200px] md:w-[350px] md:h-[350px] rounded-full shadow-[0_0_60px_#7b2a50] ring-4 ring-pink-800/50 ring-offset-2 ring-offset-[#3f1d2d] animate-pulse-ring">
+            <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full shadow-[0_0_60px_#7b2a50] ring-4 ring-pink-800/50 ring-offset-2 ring-offset-[#3f1d2d] animate-pulse-ring">
               <Image
                 src="/profile.jpg"
                 alt="Andi Agung"
@@ -67,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="scroll-mt-32 min-h-screen w-full flex flex-col md:flex-row items-center justify-between bg-stone-300 text-white px-6 py-12">
+      <section id="about" className="scroll-mt-32 flex flex-col md:flex-row items-center justify-between bg-stone-300 text-white px-10 py-12">
         <div className="flex justify-between mx-4 mb-6 md:mb-0">
           <div className="mx-24 w-[300px] h-[300px] md:w-[350px] md:h-[350px] rounded-2xl ring-teal-800 ring-offset-2 ring-offset-[#3f3e1d]">
             <Image
@@ -82,7 +96,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-2xl mx-auto px-1 space-y-2">
-          <h2 className="text-4xl text-stone-800 font-bold text-center mb-6">About Me</h2>
+          <h2 className="text-4xl text-stone-800 font-bold text-center mb-6">About</h2>
           <p className="text-gray-800 font-semibold text-justify ">
             Hola, I&apos;m Andi Muhammad Agung Ramadhani Syam & u can call me Andi or Agung.
             A fresh graduate in Informatics from Kalimantan Institute of Technology and currently interning at Telkomsel Area 4
@@ -97,41 +111,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* experiences Section */}
-      <section id="experiences" className="scroll-mt-32 py-16 flex flex-col min-h-screen w-full bg-stone-600 text-center px-6">
-        <h2 className="text-4xl font-semibold text-gray-200 mb-12">Experiences</h2>
+      {/* Experiences Section */}
+      <section id="experiences" className="scroll-mt-32 py-16 flex flex-col min-h-screen w-full bg-stone-300 text-center px-6">
+        <h2 className="text-4xl font-bold text-stone-800 mb-12">Experiences</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 max-w-7xl px-5 mx-auto gap-8">
           {/* Experience 1 */}
-          <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+          <div className="bg-stone-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
             <h3 className="text-xl text-gray-200 font-semibold mb-2">Backend Developer Intern</h3>
-            <p className="text-pink-600 mb-2">Telkomsel Area 4 Pamasuka | February 2025 - May 2025</p>
+            <p className="text-pink-500 mb-2">Telkomsel Area 4 Pamasuka | February 2025 - May 2025</p>
             <p className="text-gray-200">
               Build and Design API for chatbot telegram integration with LLM&apos;S.
             </p>
           </div>
 
           {/* Experience 2 */}
-          <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+          <div className="bg-stone-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
             <h3 className="text-xl text-gray-200 font-semibold mb-2">Teaching Assistant</h3>
-            <p className="text-pink-600 mb-2">Institut Teknologi Kalimantan | February 2022 - May 2024</p>
+            <p className="text-pink-500 mb-2">Institut Teknologi Kalimantan | February 2022 - May 2024</p>
             <p className="text-gray-200">
               Guided and assisted students in understanding course materials through structured instruction and support. The courses I taught include Digital Systems and Programming Algorithm.
             </p>
           </div>
 
           {/* Experience 3 */}
-          <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+          <div className="bg-stone-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
             <h3 className="text-xl text-gray-200 font-semibold mb-2">Project Manager</h3>
-            <p className="text-pink-600 mb-2">Xplora Tech | January 2024 - January 2025</p>
+            <p className="text-pink-500 mb-2">Xplora Tech | January 2024 - January 2025</p>
             <p className="text-gray-200">
               Maintained regular communication with clients, ensuring their requirements were met and providing regular progress updates.
             </p>
           </div>
 
           {/* Experience 4 */}
-          <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
+          <div className="bg-stone-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
             <h3 className="text-xl text-gray-200 font-semibold mb-2">Full-Stack Developer Intern</h3>
-            <p className="text-pink-600 mb-2">MSIB Batch 5 Skillvul | August 2023</p>
+            <p className="text-pink-500 mb-2">MSIB Batch 5 Skillvul | August 2023</p>
             <p className="text-gray-200">
               Developed a course website with business logic, user authentication, and database integration with React, Node.js, Express.js, and MySQL.
             </p>
@@ -141,7 +155,7 @@ export default function Home() {
 
       {/* Projects Section */}
       <section id="projects" className="scroll-mt-32 min-h-screen w-full flex flex-col max-w-7xl mx-auto py-4">
-        <h2 className="text-4xl text-stone-800 font-bold text-center mt-5 mb-15">Projects</h2>
+        <h2 className="text-4xl text-stone-300 font-bold text-center mt-5 mb-15">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-18 mb-18 px-8">
           <ProjectCard
             title="AviSent"
@@ -171,47 +185,63 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="scroll-mt-24 flex flex-col min-h-screen w-full justify-end items-center bg-stone-800 text-center px-4 py-24">
-        <h2 className="text-3xl text-gray-200 font-semibold mb-8">Get in touch with me</h2>
+      <section id="contact" className="scroll-mt-24 flex flex-col min-h-screen w-full justify-end items-center bg-stone-300 text-center px-4 py-24">
+        <h2 className="text-3xl text-stone-800 font-bold mb-8">Get in touch with me</h2>
         <div className="flex justify-center items-center space-x-6 relative">
           {/* Email Icon */}
-          <a href="a.agung112@gmail.com" className="group mb-20 relative">
-            <Mail className="w-12 h-12 text-red-600 transition-all duration-300 ease-in-out transform group-hover:scale-150 group-hover:rotate-12 group-hover:shadow-xl group-hover:text-white" />
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKHRLnBvDXBHPhLQrcZmwQcGfglMpcpQDTMCFHWsJGVnQPQJRvQvNCgQZqlwpvVCCtfmvDq"
+            className="group mb-20 relative"
+            onClick={() => handleClick('email')}
+          >
+            <Mail className={`w-12 h-12 text-red-600 transition-all duration-300 ease-in-out transform ${clicked === 'email' ? clickedClass : iconClass}`} />
             <div className="hidden group-hover:block absolute bg-stone-100 text-red-600 p-2 rounded-md mt-2 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
               a.agung112@gmail.com
             </div>
           </a>
 
           {/* LinkedIn Icon */}
-          <a href="https://www.linkedin.com/in/andiagung12" className="group mb-20 relative">
-            <Linkedin className="w-12 h-12 text-blue-600 transition-all duration-300 ease-in-out transform group-hover:scale-150 group-hover:-rotate-12 group-hover:shadow-xl group-hover:text-white" />
+          <a
+            href="https://www.linkedin.com/in/andiagung12"
+            className="group mb-20 relative"
+            onClick={() => handleClick('linkedin')}
+          >
+            <Linkedin className={`w-12 h-12 text-blue-600 transition-all duration-300 ease-in-out transform ${clicked === 'linkedin' ? clickedClass2 : iconClass}`} />
             <div className="hidden group-hover:block absolute bg-stone-200 text-blue-600 p-2 rounded-md mt-2 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
               andiagung12
             </div>
           </a>
 
           {/* GitHub Icon */}
-          <a href="https://github.com/possible112" className="group mb-20 relative">
-            <Github className="w-12 h-12 text-emerald-600 transition-all duration-300 ease-in-out transform group-hover:scale-150 group-hover:rotate-12 group-hover:shadow-xl group-hover:text-white" />
+          <a
+            href="https://github.com/possible112"
+            className="group mb-20 relative"
+            onClick={() => handleClick('github')}
+          >
+            <Github className={`w-12 h-12 text-emerald-600 transition-all duration-300 ease-in-out transform ${clicked === 'github' ? clickedClass : iconClass}`} />
             <div className="hidden group-hover:block absolute bg-stone-200 text-emerald-600 p-2 rounded-md mt-2 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
               possible112
             </div>
           </a>
 
           {/* Instagram Icon */}
-          <a href="https://www.instagram.com/andiaguung.__/" className="group mb-20 relative">
-            <Instagram className="w-12 h-12 text-pink-600 transition-all duration-300 ease-in-out transform group-hover:scale-150 group-hover:-rotate-12 group-hover:shadow-xl group-hover:text-white" />
+          <a
+            href="https://www.instagram.com/andiaguung.__/"
+            className="group mb-20 relative"
+            onClick={() => handleClick('instagram')}
+          >
+            <Instagram className={`w-12 h-12 text-pink-600 transition-all duration-300 ease-in-out transform ${clicked === 'instagram' ? clickedClass2 : iconClass}`} />
             <div className="hidden group-hover:block absolute bg-stone-200 text-pink-600 p-2 rounded-md mt-2 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
               @andiaguung.__
             </div>
           </a>
         </div>
+
         <div className="flex justify-center items-center mt-auto space-x-6">
-          <Copyright className="w-10 h-10 text-white transition-all duration-300 ease-in-out transform group-hover:scale-50 group-hover:shadow-lg" />
-          <h3 className="text-gray-200 font-semibold">2025 Andi Agung. All rights reserved!</h3>
+          <Copyright className="w-10 h-10 text-stone-800 transition-all duration-300 ease-in-out transform group-hover:scale-50 group-hover:shadow-lg" />
+          <h3 className="text-stone-800 font-semibold">2025 Andi Agung. All rights reserved!</h3>
         </div>
       </section>
-
     </main>
   );
 }

@@ -28,9 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth bg-stone-800`}
       >
-        <Navbar />
         {children}
         <SpeedInsights />
       </body>
