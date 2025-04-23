@@ -13,7 +13,7 @@ export default function Home() {
       <section id="hero" className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center bg-stone-800 text-white px-2 py-12 md:px-16">
         <div className="w-full grid md:grid-cols-2 gap-6 items-center py-8 md:px-16">
           {/* Left: Text */}
-          <div className="px-2 space-y-4 text-center md:text-left">
+          <div className="px-3 space-y-4 text-center md:text-left">
             <h1 className="text-pink-600 text-4xl md:text-6xl font-bold">
               <span className="text-gray-100">Hi, I&apos;m</span> Andi Agung
             </h1>
@@ -98,7 +98,7 @@ export default function Home() {
       {/* experiences Section */}
       <section id="experiences" className="scroll-mt-32 py-16 bg-stone-600 text-center px-6">
         <h2 className="text-4xl font-semibold text-gray-200 mb-12">Experiences</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 max-w-7xl px-5 mx-auto gap-8">
           {/* Experience 1 */}
           <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
             <h3 className="text-xl text-gray-200 font-semibold mb-2">Backend Developer Intern</h3>
@@ -138,9 +138,9 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="scroll-mt-32 max-w-6xl mx-auto py-4">
+      <section id="projects" className="scroll-mt-32 max-w-7xl mx-auto py-4">
         <h2 className="text-4xl text-stone-600 font-bold text-center mt-5 mb-15">Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-18 mb-18 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-18 mb-18 px-8">
           <ProjectCard
             title="AviSent"
             description="Smart Bird Pest Control Prototype Based on Object Detection to Support Food Security. Click for more details>>>."
