@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="scroll-mt-32 min-h-screen w-full flex flex-col max-w-7xl mx-auto py-4 bg-stone-300">
+      <section id="projects" className="scroll-mt-32 min-h-screen w-full flex flex-col max-w-7xl mx-auto py-4">
         <h2 className="text-4xl text-stone-800 font-bold text-center mt-5 mb-15">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-18 mb-18 px-8">
           <ProjectCard
