@@ -98,7 +98,7 @@ export default function Home() {
       {/* experiences Section */}
       <section id="experiences" className="scroll-mt-32 py-16 bg-stone-600 text-center px-6">
         <h2 className="text-4xl font-semibold text-gray-200 mb-12">Experiences</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 mx-auto gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 max-w-6xl mx-auto gap-6">
           {/* Experience 1 */}
           <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition-all duration-300">
             <h3 className="text-xl text-gray-200 font-semibold mb-2">Backend Developer Intern</h3>
