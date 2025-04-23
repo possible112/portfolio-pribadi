@@ -34,7 +34,7 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
   return (
     <div
       id={title}
-      className={`rounded-xl overflow-hidden shadow-lg border transition-all duration-300 cursor-pointer ${isVisible ? 'transform scale-105 bg-white' : 'bg-stone-200'}`}
+      className={`rounded-xl overflow-hidden shadow-lg border transition-all duration-300 cursor-pointer ${isVisible ? 'transform scale-105 bg-stone-800' : 'bg-stone-200'}`}
       onClick={() => link && window.open(link, '_blank')}
     >
       <Image
@@ -46,12 +46,12 @@ export default function ProjectCard({ title, description, imageUrl, link }: Proj
       />
       <div className="p-4">
         <h3
-          className={`text-xl font-bold mb-2 transition-all duration-300 ${isVisible ? 'text-pink-600' : 'text-stone-800'}`}
+          className={`text-xl font-bold mb-2 transition-all duration-300 ${isVisible ? 'text-pink-500' : 'text-stone-800'}`}
         >
           {title}
         </h3>
         <p
-          className={`text-stone-600 text-semibold mb-4 transition-all duration-300 ${isVisible ? 'text-pink-600' : 'text-stone-600'}`}
+          className={`text-gray-300 text-semibold mb-4 transition-all duration-300 ${isVisible ? 'text-gray-300' : 'text-stone-800'}`}
         >
           {description}
         </p>
